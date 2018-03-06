@@ -1,0 +1,27 @@
+<% var pageTitle = '', pathPartials = './_partials/'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include(pathPartials + 'head', { title: pageTitle }) %>
+<link rel="stylesheet" type="text/css" href="/common/css/top.css">
+</head>
+<body>
+
+<div class="page" id="PageView">
+
+  <%- include(pathPartials + 'header') %>
+
+  <main class="main">
+
+
+
+  </main>
+
+  <%- include(pathPartials + 'footer') %>
+
+</div><!--/.page -->
+
+<%- include(pathPartials + 'common_js') %>
+<script src="/common/js/sub/top.js"></script>
+</body>
+</html>
