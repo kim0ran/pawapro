@@ -1,0 +1,93 @@
+/*----------------------------------------------------------
+ header
+------------------------------------------------------------*/
+
+.header
+  padding: 15px 0
+  background: #192469
+  overflow: hidden
+  &__logo
+    float: left
+    a
+      display: block
+      //width: 250px
+      //height: 52px
+      //background: url("/common/img/logo_site.png") no-repeat 0 0
+      //text-indent: -9999px
+      img
+        width: auto
+        height: 52px
+    &:hover
+      opacity: 0.7
+
+
+/*----------------------------------------------------------
+ globalNav
+------------------------------------------------------------*/
+
+.globalNav
+  float: right
+  &__btnToggle
+    display: none
+  &__list
+    padding-top: 5px
+    overflow: hidden
+    > li
+      position: relative
+      float: left
+      margin-left: 2px
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 1px
+        height: 80%
+        margin-top: 5%
+        border-left: 1px solid #fff
+        transform: rotate(45deg)
+        opacity: 0.7
+      &:first-child:before
+        border-width: 0
+      a
+        display: block
+        padding: 10px 30px 10px 35px
+        color: #d2d4df
+        text-decoration: none
+        &:hover
+          color: #fff
+      &.current
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0.7)
+        a
+          color: #dbd063
+          cursor: default
+
+
+/*----------------------------------------------------------
+ topicPath
+------------------------------------------------------------*/
+
+.topicPath
+  padding: 1px 0 5px
+  background: #111
+  &__list
+    > li
+      display: inline
+      font-size: 10px
+      color: #d1d4e0
+      font-weight: bold
+      + li:before
+        content: "＞"
+        margin-right: 5px
+        color: #d1d4e0
+        font-weight: normal
+        opacity: 0.7
+      a
+        color: #d1d4e0
+        font-weight: normal
+        text-decoration: none
+        &:hover
+          color: #fff
+          text-decoration: underline
+

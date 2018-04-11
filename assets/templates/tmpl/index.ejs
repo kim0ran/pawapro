@@ -1,0 +1,68 @@
+<% var pageTitle = '選手', pathPartials = '../_partials/'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include(pathPartials + 'head', { title: pageTitle }) %>
+<link rel="stylesheet" type="text/css" href="/common/css/top.css">
+</head>
+<body>
+
+<div class="page" id="PageView">
+
+  <%- include(pathPartials + 'header') %>
+
+  <div class="topicPath">
+    <div class="inner">
+      <ol class="topicPath__list">
+        <li><a href="/">TOP</a></li>
+        <li>選手</li>
+      </ol>
+    </div>
+  </div><!--/.topicPath -->
+
+  <main class="main">
+
+    <header class="main_header">
+      <div class="inner">
+        <h1 class="main_header__title">大見出し</h1>
+        <p class="main_header__caption">キャプション</p>
+      </div>
+    </header>
+
+    <div class="main__inner main__inner--flex inner">
+
+      <div class="contents">
+
+        <!-- <%- include(pathPartials + 'narrowpanel') %> -->
+
+        <%- include(pathPartials + 'thumblist') %>
+
+      </div><!--/.contents -->
+
+      <div class="sidebar" id="SidebarView">
+        <nav class="sidebar_nav">
+          <div class="sidebar_nav__header js-accordHead">
+            <p class="sidebar_nav__caption">PLAYER</p>
+            <p class="sidebar_nav__title">ポジション</p>
+          </div>
+          <ul class="sidebar_nav__list js-accordMain">
+            <li class="current"><a href="">全て</a></li>
+            <li><a href="">投手</a></li>
+            <li><a href="">捕手</a></li>
+            <li><a href="">内野手</a></li>
+            <li><a href="">外野手</a></li>
+          </ul>
+        </nav>
+      </div><!--/.sidebar -->
+
+    </div><!--/.main__inner -->
+  </main>
+
+  <%- include(pathPartials + 'footer') %>
+
+</div><!--/.page -->
+
+<%- include(pathPartials + 'common_js') %>
+<script src="/common/js/sub/top.js"></script>
+</body>
+</html>

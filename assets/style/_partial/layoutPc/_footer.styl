@@ -1,0 +1,69 @@
+/*----------------------------------------------------------
+ footer
+------------------------------------------------------------*/
+
+.footer
+  &_nav
+    padding: 30px 0
+    background: #111
+    text-align: center
+    &__list
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
+      > li
+        display: inline-block
+        margin: 0 20px
+        a
+          font-size: 14px
+          color: #fff
+          text-decoration: none
+        &:hover
+          text-decoration: underline
+  &__btn
+    &--pageTop
+      position: fixed
+      bottom: 25px
+      right: 30px
+      a
+        display: block
+        position: relative
+        width: 40px
+        height: 40px
+        background: #fff
+        border-radius: 20px
+        box-shadow: 0 0 3px #000
+        text-indent: -9999px
+        opacity: 0.5
+        &:after
+          content: ""
+          display: block
+          position: absolute
+          top: 15px
+          left: 14px
+          width: 12px
+          height: 12px
+          border-top: 2px solid #039
+          border-left: 2px solid #039
+          transform: rotate(45deg)
+        &:hover
+          opacity: 1
+  &__attention
+    margin-top: 25px
+    font-size: 14px
+    color: #aaa
+    text-align: center
+  &__copyright
+    padding: 30px 0
+    font-size: 14px
+    text-align: center
+    a
+      display: inline-block
+      width: 100px
+      height: 32px
+      vertical-align: middle
+      background: url("/common/img/logo_kim0ran.svg") no-repeat 0 0
+      background-size: 100px auto
+      text-indent: -9999px
+      &:hover
+        opacity: 0.7

@@ -1,0 +1,84 @@
+/*----------------------------------------------------------
+ thumbList
+------------------------------------------------------------*/
+
+@media $mq-pc
+
+  .thumbList
+    position: relative
+    margin-bottom: 50px
+    padding: 0 50px
+    &__inner
+      overflow: hidden
+    &__list
+      overflow: hidden
+      > li
+        float: left
+        margin-right: 15px
+    &__item
+      a
+        display: block
+        span
+          display: block
+          width: 100px
+          height: 100px
+          background: #ccc
+        figcaption
+          display: block
+          margin-top: 5px
+          font-size: 12px
+          color: #333
+          line-height: 1em
+          text-align: center
+    &__btn
+      position: absolute
+      top: 0
+      width: 50px
+      height: 100%
+      background: rgba(255, 255, 255, 0.5)
+      cursor: pointer
+      &--prev
+        left: 0
+      &--next
+        right: 0
+
+@media $mq-sp
+
+  .thumbList
+    position: relative
+    margin-bottom: 50px
+    padding: 0 30px
+    &__inner
+      overflow: hidden
+    &__list
+      overflow: hidden
+      > li
+        float: left
+        margin-right: 5px
+    &__item
+      a
+        display: block
+        span
+          display: block
+          width: 80px
+          height: 80px
+          background: #ccc
+        figcaption
+          display: block
+          margin-top: 5px
+          font-size: 12px
+          color: #333
+          line-height: 1em
+          text-align: center
+    &__btn
+      position: absolute
+      top: 0
+      width: 30px
+      height: 100%
+      background: rgba(255, 255, 255, 0.5)
+      cursor: pointer
+      &--prev
+        left: 0
+      &--next
+        right: 0
+

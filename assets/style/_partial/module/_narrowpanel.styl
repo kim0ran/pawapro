@@ -1,0 +1,23 @@
+/*----------------------------------------------------------
+ narrowPanel
+------------------------------------------------------------*/
+
+.narrowPanel
+  padding: 20px
+  background: #f6f6f6
+  border: 2px solid #eee
+  &_header
+    border-bottom: 1px solid #fff
+    &__list
+      &--selected
+        > dt
+          float: left
+          font-size: 12px
+          font-weight: bold
+        > dd
+          overflow: hidden
+      &--tag
+        > li
+          display: inline-block
+          vertical-align: top
+          line-height: 1em

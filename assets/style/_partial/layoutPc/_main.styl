@@ -1,0 +1,114 @@
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+.main
+  &_header
+    position: relative
+    z-index: 2
+    padding: 35px 0
+    background: #f3f3f3
+    //text-align: center
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15)
+    &__title
+      font-size: 38px
+      color: #192469
+      line-height: 1
+      text-indent: -5px
+      font-weight: normal
+    &__caption
+      margin-top: 10px
+      font-size: 14px
+      color: #777
+      line-height: 1
+  &__inner
+    position: relative
+    &--flex
+      display: flex
+      flex-direction: row-reverse
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+.contents
+  padding-top: 55px
+  padding-bottom: 100px
+
+.section
+  &_header
+    margin-bottom: 50px
+    &__title
+      font-size: 32px
+      font-weight: normal
+    &__caption
+      color: #777
+
+
+/*----------------------------------------------------------
+ sidebar
+------------------------------------------------------------*/
+
+.sidebar
+  min-width: 250px
+  margin-right: 40px
+  padding-bottom: 100px
+  background: #0c105f
+  //border-radius: 0 0 5px 5px
+  &_nav
+    &__header
+      padding: 40px 20px 20px
+    &__caption
+      font-size: 36px
+      color: #565986
+      line-height: 1
+    &__title
+      margin-top: 30px
+      font-size: 16px
+      color: #fff
+    &__list
+      border-bottom: 1px solid #33366d
+      > li
+        position: relative
+        border-top: 1px solid #33366d
+        a
+          display: block
+          padding: 15px 20px
+          font-size: 14px
+          color: #d2d4df
+          text-decoration: none
+          &:before
+            content: "ー"
+            margin-right: 8px
+            font-size: 12px
+            opacity: 0.5
+        &:not([class*="current"]) a:hover
+          background-color: #272b65
+          color: #fff
+        &.current
+          a
+            color: #dbd063
+            cursor: default
+          &:after
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            right: -7px
+            width: 14px
+            height: 14px
+            margin-top: -7px
+            background: #0c105f
+            transform: rotate(45deg)
+
+
+
+
+
+
+
+
+
+
+
