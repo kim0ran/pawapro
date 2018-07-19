@@ -7,7 +7,9 @@
   .thumbList
     position: relative
     margin-bottom: 50px
-    padding: 0 50px
+    padding: 20px 50px
+    border: 2px solid #eee
+    border-radius: 3px
     &__inner
       overflow: hidden
     &__list
@@ -31,7 +33,7 @@
           line-height: 1em
           text-align: center
     &__btn
-      position: absolute
+      position: absolute !important
       top: 0
       width: 50px
       height: 100%
@@ -39,15 +41,19 @@
       cursor: pointer
       &--prev
         left: 0
+        text-indent: -9999px
+        mixin--arrow-left(14px, #ccc, 20px)
       &--next
         right: 0
+        text-indent: -9999px
+        mixin--arrow-right(14px, #ccc, 20px)
 
 @media $mq-sp
 
   .thumbList
     position: relative
-    margin-bottom: 50px
-    padding: 0 30px
+    margin: 0 -15px 30px
+    padding: 0 40px
     &__inner
       overflow: hidden
     &__list
@@ -71,7 +77,7 @@
           line-height: 1em
           text-align: center
     &__btn
-      position: absolute
+      position: absolute !important
       top: 0
       width: 30px
       height: 100%
@@ -79,6 +85,10 @@
       cursor: pointer
       &--prev
         left: 0
+        text-indent: -9999px
+        mixin--arrow-left(14px, #ccc, 15px)
       &--next
         right: 0
+        text-indent: -9999px
+        mixin--arrow-right(14px, #ccc, 15px)
 

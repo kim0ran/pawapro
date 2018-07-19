@@ -15,6 +15,10 @@ $(function() {
     var thumbListView = new ui.thumbSlider();
     thumbListView.init({ el: '#ThumbListView' });
 
+    /* 能力詳細 */
+    var detailAbilityView = new ui.switchContents();
+    detailAbilityView.init({ el: '#DetailAbilityView' });
+
   };
 
   /* インスタンス */

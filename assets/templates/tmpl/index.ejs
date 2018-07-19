@@ -1,4 +1,4 @@
-<% var pageTitle = '選手', pathPartials = '../_partials/'; %>
+<% var pageTitle = '', pathPartials = '../_partials/'; %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,7 +15,8 @@
     <div class="inner">
       <ol class="topicPath__list">
         <li><a href="/">TOP</a></li>
-        <li>選手</li>
+        <li><a href="/">事業トピックス</a></li>
+        <li>こだわりのものづくり</li>
       </ol>
     </div>
   </div><!--/.topicPath -->
@@ -24,8 +25,8 @@
 
     <header class="main_header">
       <div class="inner">
-        <h1 class="main_header__title">大見出し</h1>
-        <p class="main_header__caption">キャプション</p>
+        <h1 class="main_header__title">OCEAN SPIRAL</h1>
+        <p class="main_header__caption">深海未来都市構想</p>
       </div>
     </header>
 
@@ -37,20 +38,73 @@
 
         <%- include(pathPartials + 'thumblist') %>
 
+        <section class="section">
+          <header class="section_header">
+            <h2 class="section_header__title">“深海を垂直に繋ぐ”という発想</h2>
+            <p class="section_header__caption">シミズ・ドリーム</p>
+          </header>
+          <p class="section__notes">
+            日本列島は地球活動のもっとも活発な場所の一つに位置します。したがって、海洋、地球、生命、そして人間活動の統合的な理解を日本から発信することが、私どもの責務だとJAMSTECではかねてより考えておりました。<br>
+            さらに今後は、海洋資源の利用、海洋生命工学の展開、海洋地球情報の高度化など、海洋イノベーションを力強く推進する必要があります。
+          </p>
+
+          <div class="detailAbility" id="DetailAbilityView">
+            <ul class="detailAbility__nav js-switchNav">
+              <li><a href="">OCEAN SPIRAL</a></li>
+              <li><a href="">GREEN FLOAT</a></li>
+              <li><a href="">LUNA RING</a></li>
+            </ul>
+            <div class="detailAbility__content js-switchContentsOuter">
+              <div class="detailAbility__section js-switchContents" data-target="">
+                <img src="https://www.shimz.co.jp/topics/dream/content01/images/img_index_02.jpg" alt="">
+                <p class="section__notes">
+                  地球表面の約70％は海であり、その約80％は深海です。<br>
+                  深海は、地球生命圏を正しく循環させる大きなポテンシャルを持っています。<br>
+                  しかし、私たちはそのポテンシャルをまだ活かしきっていません。<br>
+                  大気・海面・深海・海底を、垂直に統合することにより、深海の無限の可能性を活かせると考えました。<br>
+                  地球最後のフロンティアである深海との新しい繋がりを、今こそ持つべきです。<br>
+                  深海の本格的な利用により、かつての陸上型の効率至上主義開発とは一線を画し、地球における「人類社会の持続性」の飛躍的向上をめざします。
+                </p>
+              </div>
+              <div class="detailAbility__section js-switchContents" data-target="">
+                <img src="https://www.shimz.co.jp/topics/dream/content03/images/img_index_01.jpg" alt="">
+                <p class="section__notes">
+                  経済的に発展した都市に暮らす私たち。暮らしは格段に便利になりました。<br>
+                  しかし、ほんとうの幸せについて考えたとき、物質的な豊かさとは別の、幸せのはかりかたがあってもいいと思うのです。<br>
+                  自然とのふれあい。文化的でゆるやかに流れる時間。健康的で快適な暮らし。<br>
+                  そして自然に溶け込んでやさしく共生し、生態系の一部として、ともに成長していく。<br>
+                  例えるなら、ひとつの“植物”のような都市がつくれないだろうか。<br>
+                  そんな想いから、私たちの新環境都市モデルは生まれました。
+                </p>
+              </div>
+              <div class="detailAbility__section js-switchContents" data-target="">
+                <img src="https://www.shimz.co.jp/topics/dream/content02/images/img_index_03.jpg" alt="">
+                <p class="section__notes">
+                  地球上の限りある資源を節約しながら使う･･･ というこれまでのパラダイムから、無限に近いクリーンエネルギーをつくり出し、潤沢なクリーンエネルギーを自由に使うという発想へのシフト。独創的なアイデアと宇宙技術の研究開発によって、それを具現化したのが「月太陽発電 ルナリング」構想です。<br>
+                  惑星地球は太陽の賜。永続的になくなることのない、どれだけ使っても地球環境に影響を及ぼさない、太陽の膨大なエネルギーが、未来の地球を美しくし、未来の豊かな生活をもたらします。<br>
+                  いつまでもこの美しい地球と人類が共存していくために･･･<br>
+                  清水建設からの新しい提案です。
+                </p>
+              </div>
+            </div>
+          </div><!--/.detailAbility -->
+
+        </section>
+
       </div><!--/.contents -->
 
       <div class="sidebar" id="SidebarView">
         <nav class="sidebar_nav">
           <div class="sidebar_nav__header js-accordHead">
-            <p class="sidebar_nav__caption">PLAYER</p>
-            <p class="sidebar_nav__title">ポジション</p>
+            <p class="sidebar_nav__caption">INDEX</p>
+            <p class="sidebar_nav__title">コンテンツ</p>
           </div>
           <ul class="sidebar_nav__list js-accordMain">
-            <li class="current"><a href="">全て</a></li>
-            <li><a href="">投手</a></li>
-            <li><a href="">捕手</a></li>
-            <li><a href="">内野手</a></li>
-            <li><a href="">外野手</a></li>
+            <li class="current"><a href="">こだわりのものづくり</a></li>
+            <li><a href="">施設を守る・不動産を活かす</a></li>
+            <li><a href="">フィールドは世界</a></li>
+            <li><a href="">持続可能な社会へ</a></li>
+            <li><a href="">清水・ドリーム</a></li>
           </ul>
         </nav>
       </div><!--/.sidebar -->

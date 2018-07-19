@@ -188,6 +188,72 @@
         return this;
       };
       return constructor;
+    })(),
+
+    /**
+     * 切り替えコンテンツ
+     */
+    switchContents: (function() {
+      var constructor = function() {
+        this.$el = {};
+        this.$nav = {};
+        this.$navChild = {};
+        this.$contentOuter = {};
+        this.$content = {};
+        this.classActiveNav = 'active';
+        this.showContentNum = 0;
+        this.isAnimate = false;
+        return this;
+      };
+      var proto = constructor.prototype;
+      proto.init = function(args) {
+        this.setEl(args.el);
+        this.setStyle();
+        this.setEvents();
+        return this;
+      };
+      proto.setEl = function(el) {
+        this.$el = $(el);
+        this.$nav = this.$el.find('.js-switchNav');
+        this.$navChild = this.$nav.children();
+        this.$contentOuter = this.$el.find('.js-switchContentsOuter');
+        this.$content = this.$contentOuter.find('.js-switchContents');
+        return this;
+      };
+      proto.setStyle = function() {
+        var maxHeight = 0;
+        this.$content.each(function() {
+          var height = $(this).outerHeight();
+          if(maxHeight < height) {
+            maxHeight = height;
+          }
+        });
+        this.$contentOuter.css({ height: maxHeight });
+        this.$navChild.removeClass(this.classActiveNav);
+        this.$navChild.eq(this.showContentNum).addClass(this.classActiveNav);
+        this.$content.hide();
+        this.$content.eq(this.showContentNum).show();
+        return this;
+      };
+      proto.setEvents = function() {
+        var that = this;
+        this.$navChild.find('a').on('click', function(e) {
+          if(!that.isAnimate) {
+            e.preventDefault();
+            that.animateShowTargetContent(this);
+          }
+        });
+        return this;
+      };
+      proto.animateShowTargetContent = function(target) {
+        this.$content.eq(this.showContentNum).fadeOut();
+        this.$navChild.eq(this.showContentNum).removeClass(this.classActiveNav);
+        this.showContentNum = $(target).parent().index();
+        this.$content.eq(this.showContentNum).fadeIn();
+        this.$navChild.eq(this.showContentNum).addClass(this.classActiveNav);
+        return this;
+      };
+      return constructor;
     })()
 
   };

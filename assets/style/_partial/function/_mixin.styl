@@ -15,6 +15,16 @@ mixin--arrow(colors)
     border-style: solid
     border-color: colors
 
+mixin--arrow-left(size, colors, left)
+  mixin--arrow(colors)
+  &:after
+    top: 50%
+    left: left
+    width: size
+    height: size
+    margin-top: -(size/1.7)
+    border-width: 0 0 2px 2px
+
 mixin--arrow-right(size, colors, right)
   mixin--arrow(colors)
   &:after
